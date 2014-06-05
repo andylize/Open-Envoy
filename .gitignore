@@ -5,6 +5,9 @@
 *.swp
 *.out
 
+## database directory
+db/
+
 ## Eclipse related
 *.pydevproject
 .metadata
