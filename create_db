@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sqlite3 ./db/oe.db < create_script

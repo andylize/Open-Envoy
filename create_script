@@ -1,0 +1,37 @@
+CREATE TABLE Users (
+	user_id int,
+	user_name varchar(255),
+	password varchar(255),
+	first_name varchar(255),
+	last_name varchar(255),
+	PRIMARY KEY (user_id));
+	
+CREATE TABLE Groups (
+	group_id int,
+	group_name varchar(255),
+	PRIMARY KEY (group_id));
+	
+CREATE TABLE Users_Groups (
+	user_id int,
+	group_id int,
+	PRIMARY KEY (user_id, group_id));
+
+CREATE TABLE Commands (
+	command_id int,
+	server_name varchar(255),
+	server_type int,
+	command_string varchar(512),
+	arguments varchar(255),
+	returns_result int,
+	PRIMARY KEY (command_id));
+	
+
+CREATE TABLE Groups_Commands (
+	group_id int,
+	command_id int,
+	PRIMARY KEY (group_id, command_id));
+	
+INSERT INTO Users (user_id, user_name, password, first_name, last_name) VALUES (1, 'admin', '', 'Administrator', '');
+INSERT INTO Groups (group_id, group_name) VALUES (1, 'admin');
+INSERT INTO Users_Groups (user_id, group_id) VALUES (1, 1);
+
